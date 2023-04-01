@@ -2,7 +2,9 @@
 .App {
   background-color: aqua;
   display: grid;
-  place-content: center;
+  justify-items: center;
+  align-items: center;
+  row-gap: 40px;
 }
 
 
