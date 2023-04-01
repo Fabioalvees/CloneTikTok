@@ -1,8 +1,13 @@
+html{
+  scroll-snap-type: y mandatory;
+}
+
 
 .App {
-  background-color: aqua;
+  background-color: rgb(2, 2, 2);
   display: grid;
-  place-content: center;
+  height: 100vh;
+  place-items: center;
 }
 
 
@@ -11,7 +16,20 @@
   max-height: 800px;
   width: 80%;
   max-width: 500px;
-  border: 1px solid black;
+  border: 1px solid rgb(20, 20, 20);
   border-radius: 20px;
   overflow: scroll;
+  scroll-snap-type: y mandatory;
+  position: relative;
+}
+
+/* Esconder a scoll bar no chrome, safari e opera*/
+.app__videos::-webkit-scrollbar{
+  display: none;
+}
+
+/* Esconder a scoll bar internet explorer, edge e firefox*/
+.app__videos{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
