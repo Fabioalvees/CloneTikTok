@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import VideoFooter from './components/footer/VideoFooter';
+import VideoSidebar from './components/sidebar/VideoSidebar';
 import "./video.css"
 
-function Video() {
+function Video({likes, messeges, shares, name, music, description, url}) {
 
   const videoRef = useRef(null)
   const [play, setPlay] = useState(false)
@@ -26,13 +27,22 @@ function Video() {
         ref={videoRef}
         onClick={handleStart}
         loop
-        src="https://poqlymuephttfsljdabn.supabase.co/storage/v1/object/public/jornadadev/bird.mp4"
+        src={url}
       >
       </video>
-      {/*Side bar*/}
+      
+      <VideoSidebar
+      likes={likes}
+      messeges={messeges}
+      shares={shares}/>
 
-      <VideoFooter/>
-      {/*footer*/}
+      <VideoFooter
+      name={name}
+      description={description} 
+      music={music}
+      />
+      
+      
     </div>
   );
 }
