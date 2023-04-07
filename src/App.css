@@ -33,3 +33,11 @@ html{
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
+@media only scren and(max-width: 400px){
+  .app__videos{
+    width: 100%;
+    height: 100vh;
+  }
+}

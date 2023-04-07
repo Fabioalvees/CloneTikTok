@@ -9,3 +9,9 @@
     padding: 20px;
     text-align: center;
 }
+
+@media only scren and(max-width: 400px){
+    .videosidebar{
+      top: 46%;
+    }
+  }
